@@ -61,9 +61,9 @@ function getReviewList (coords) {
     if (JSON.stringify(review.coords) ===  JSON.stringify(coords)){
       reviewListHTML += `
       <div class = 'review'>
-        <div> <strong>Место: </strong>${review.place}</div>
-        <div> <strong>Автор: </strong>${review.author}</div>
-        <div> <strong>Отзыв: </strong>${review.comment}</div>
+        <span class = 'review__author'>${review.author}</span>
+        <span class = 'review__place'>${review.place}</span>
+        <div class = 'review__comment'>${review.comment}</div>
       </div>
       `
     }
@@ -75,10 +75,11 @@ async function openBallon(map, coords, clusterer, fn) {
   await map.balloon.open(coords, {
     content: `
     <div class= 'reviews'>${getReviewList(coords)}</div>
+    <div class = 'title'>Отзыв:</div>
     <form id = "add-form">
-      <input type = "text" class='place' placeholder = "Название места" name = "place"><br></br>
-      <input type = "text" class='author' placeholder = "Ваше имя" name = "author"><br></br>
-      <textarea placeholder = "Оценка" class = 'comment' ></textarea><br></br>
+      <input type = "text" class='place' placeholder = "Укажите место" name = "place"><br></br>
+      <input type = "text" class='author' placeholder = "Укажите ваше имя" name = "author"><br></br>
+      <textarea placeholder = "Оставть отзыв" class = 'comment' ></textarea><br></br>
       <button id = "add-btn">Добавить</button><br></br>
     </form>
     `
