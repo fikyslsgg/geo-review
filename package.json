@@ -1,0 +1,48 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "cross-env NODE_ENV=dev gulp",
+    "build": "cross-env NODE_ENV=prod gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fikyslsgg/gulp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fikyslsgg/gulp/issues"
+  },
+  "homepage": "https://github.com/fikyslsgg/gulp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.1",
+    "gulp-svgo": "^2.2.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.56.2",
+    "svgo": "^3.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "jquery": "^3.6.2",
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1"
+  }
+}
